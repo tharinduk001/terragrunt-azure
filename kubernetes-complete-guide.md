@@ -1,9 +1,9 @@
 # Complete Kubernetes Getting Started Guide
 # Everything you need in one file - copy and use!
 
-================================================================================
+=================================
 TABLE OF CONTENTS
-================================================================================
+=================================
 1. Introduction & Prerequisites
 2. Pods - The Basics
 3. ReplicaSets - Self-Healing
@@ -14,9 +14,9 @@ TABLE OF CONTENTS
 8. Practice Exercises
 9. Troubleshooting Guide
 
-================================================================================
+=================================
 1. INTRODUCTION & PREREQUISITES
-================================================================================
+=================================
 
 Prerequisites:
 - A Kubernetes cluster (minikube, kind, k3s, or cloud provider)
@@ -30,9 +30,9 @@ kubectl cluster-info
 kubectl get nodes
 ```
 
-================================================================================
+=================================
 2. PODS - THE BASICS
-================================================================================
+=================================
 
 A Pod is the smallest deployable unit in Kubernetes.
 
@@ -114,9 +114,9 @@ kubectl exec -it multi-container-pod -c nginx -- /bin/bash
 kubectl delete pod multi-container-pod
 ```
 
-================================================================================
+=================================
 3. REPLICASETS - SELF-HEALING
-================================================================================
+=================================
 
 ReplicaSet ensures a specified number of pod replicas are running.
 
@@ -176,9 +176,9 @@ kubectl delete rs nginx-replicaset
 
 Important: In production, use Deployments instead of ReplicaSets directly.
 
-================================================================================
+=================================
 4. DEPLOYMENTS - PRODUCTION READY
-================================================================================
+=================================
 
 Deployments manage ReplicaSets and provide rolling updates and rollbacks.
 
@@ -313,9 +313,9 @@ Health check explanation:
 - **livenessProbe**: Restarts container if check fails
 - **readinessProbe**: Removes pod from service if check fails
 
-================================================================================
+=================================
 5. SERVICES - NETWORKING
-================================================================================
+=================================
 
 Services provide stable networking for pods.
 
@@ -435,9 +435,9 @@ kubectl get svc nginx-loadbalancer
 kubectl get svc nginx-loadbalancer -w
 ```
 
-================================================================================
+=================================
 6. COMPLETE EXAMPLES
-================================================================================
+=================================
 
 --- EXAMPLE: Full Application Stack ---
 
@@ -560,9 +560,9 @@ kubectl delete deployment hello
 kubectl delete service hello
 ```
 
-================================================================================
+=================================
 7. ESSENTIAL KUBECTL COMMANDS
-================================================================================
+=================================
 
 --- Cluster Info ---
 ```bash
@@ -715,9 +715,9 @@ kubectl diff -f <file.yaml>
 kubectl apply -f <file.yaml> --dry-run=client -o yaml
 ```
 
-================================================================================
+=================================
 8. PRACTICE EXERCISES
-================================================================================
+=================================
 
 --- Exercise 1: Create Your First Pod ---
 
@@ -863,9 +863,9 @@ Step 4: Cleanup
 kubectl delete -f complete-app.yaml
 ```
 
-================================================================================
+=================================
 9. TROUBLESHOOTING GUIDE
-================================================================================
+=================================
 
 --- Problem: Pod Stuck in Pending ---
 
@@ -984,9 +984,9 @@ kubectl exec -it <pod-name> -- /bin/bash
 kubectl get endpoints
 ```
 
-================================================================================
+=================================
 BEST PRACTICES
-================================================================================
+=================================
 
 1. Always use Deployments (not Pods or ReplicaSets directly)
 2. Set resource requests and limits
@@ -999,9 +999,9 @@ BEST PRACTICES
 9. Never use :latest tag in production
 10. Implement proper logging and monitoring
 
-================================================================================
+=================================
 NEXT STEPS
-================================================================================
+=================================
 
 After mastering these basics, explore:
 
@@ -1016,9 +1016,9 @@ After mastering these basics, explore:
 9. Monitoring - Prometheus, Grafana
 10. Service Mesh - Istio, Linkerd
 
-================================================================================
+=================================
 QUICK REFERENCE
-================================================================================
+=================================
 
 Resource Types:
 - Pod (po): Smallest unit
@@ -1043,9 +1043,9 @@ Status Values:
 - CrashLoopBackOff: Container keeps crashing
 - ImagePullBackOff: Cannot pull image
 
-================================================================================
+=================================
 END OF GUIDE
-================================================================================
+=================================
 
 Save this file and refer to it as you practice!
 Each section is complete and ready to use.
