@@ -16,3 +16,6 @@
 - empty.yaml
 - org.yaml
 - terragrunt.hcl
+
+## Then Create the rest inside `subscriptions`
+- add `subscription.yaml`
